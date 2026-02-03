@@ -11,11 +11,10 @@ export async function GET(req) {
   }
 
   const token = authHeader.split(" ")[1];
-   
+
   try {
     const decoded = jwt.verify(token, process.env.JWT_SECRET);
 
-    // You now have access to user info in decoded
     return new Response(
       JSON.stringify({
         message: "Access granted to protected route",

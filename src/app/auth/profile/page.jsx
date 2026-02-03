@@ -3,7 +3,9 @@ import axios from 'axios'
 import React from 'react'
 
 const page = () => {
-    const user = JSON.parse(localStorage.getItem("responsedata"));
+    // const user = JSON.parse(localStorage.getItem("responsedata"));
+    const user1 = localStorage.getItem("responsedata");
+    const user = JSON.parse(user1);
     console.log(user?.token)
     async function userinfo() {
         try {
